@@ -7,6 +7,7 @@
   <title>PHP SHOP SITE</title>
 </head>
 <body>
+  
   <?php
 
   try
