@@ -62,7 +62,7 @@
     商品名<br />
     <input type="text" name="name" style="width:200px" value="<?php print $pro_name; ?>"> <br />
     価格 <br />
-    <input type="text" name="price" style="width: 50pxpx" value="<?php print $pro_price; ?>">円<br />
+    <input type="text" name="price" style="width: 50px" value="<?php print $pro_price; ?>">円<br />
     <br />
     <?php print $disp_gazou; ?>
     <br>
