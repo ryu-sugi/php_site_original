@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  
   <?php
   $pro_name = $_POST['name'];
   $pro_price = $_POST['price'];
