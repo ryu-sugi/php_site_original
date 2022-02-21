@@ -51,8 +51,8 @@
       }
       else
       {
-        move_uploaded_file($pro_gazou['tmp_name'],'./product/gazou/'.$pro_gazou['name']);
-        print '<img src="./product/gazou/'.$pro_gazou['name'].'">';
+        move_uploaded_file($pro_gazou['tmp_name'],'../product/gazou/'.$pro_gazou['name']);
+        print '<img src="../product/gazou/'.$pro_gazou['name'].'">';
         print '<br>';
       }
     }

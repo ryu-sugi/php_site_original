@@ -28,17 +28,19 @@
     $data[] = $pro_code;
     $stmt->execute($data);
 
-    $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-    $pro_name = $rec['name'];
-    $pro_price = $rec['price'];
-    $pro_gazou_name_old = $rec['gazou'];
+    $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+    $pro_name=$rec['name'];
+    $pro_price=$rec['price'];
+    $pro_gazou_name_old=$rec['gazou'];
 
     $dbh = null;
 
     if ($pro_gazou_name_old == '') 
     {
       $disp_gazou = '';
-    } else {
+    } 
+    else 
+    {
       $disp_gazou = '<img src="../product/gazou/' . $pro_gazou_name_old . '">';
     }
   } 
