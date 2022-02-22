@@ -69,7 +69,4 @@ exit();
 ?>
 
 </body>
-
-
-</body>
 </html>
