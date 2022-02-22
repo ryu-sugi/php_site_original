@@ -25,16 +25,16 @@
 
     $rec=$stmt->fetch(PDO::FETCH_ASSOC);
     $pro_name=$rec['name'];
-    $pro_price=$rec['price'];
     $pro_gazou_name=$rec['gazou'];
+    $pro_price=$rec['price'];
 
     $dbh = null;
 
     if($pro_gazou_name=='') {
-      $pro_gazou='';
+      $disp_gazou='';
     }
     else {
-      $disp_gazou= '<img src="../product/gazou/'.$pro_gazou_name.'" >';
+      $disp_gazou= '<img src="./gazou/'.$pro_gazou_name.'" >';
     }
 
   }
@@ -58,7 +58,7 @@
   <br>
   <form method="post" action="pro_delete_done.php">
     <input type="hidden" name="code" value="<?PHP print $pro_code; ?>">
-    <input type="hidden" name="code" value="<?PHP print $pro_gazou_name; ?>">
+    <input type="hidden" name="gazou_name" value="<?PHP print $pro_gazou_name; ?>">
     <input type="button" onclick="history.back()" value="戻る">
     <input type="submit" value="OK">
   </form>
