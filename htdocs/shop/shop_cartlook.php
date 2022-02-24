@@ -29,10 +29,23 @@
 
   try
   {
+    if($_SESSION['cart']==true) {
 
-    $cart=$_SESSION['cart'];
-    $kazu=$_SESSION['kazu'];
-    $max=count($cart);
+      $cart=$_SESSION['cart'];
+      $kazu=$_SESSION['kazu'];
+      $max=count($cart);
+    }
+    else {
+      $max=0;
+    }
+
+    if($max==0)
+    {
+      print 'カートに商品が入っていません。 <br>';
+      print '<br>';
+      print '<a href="shop_list.php">商品一覧へ戻る</a>';
+      exit();
+    }
     
     $dsn='mysql:dbname=shop;host=172.18.0.2;port=3306;charset=utf8';
     $user='root';
