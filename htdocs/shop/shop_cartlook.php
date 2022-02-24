@@ -74,8 +74,10 @@
     <?PHP print $pro_name[$i]; ?>
     <?PHP print $pro_gazou[$i]; ?>
     <?PHP print $pro_price[$i]; ?>円
-    <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>">
     <?PHP print $kazu[$i];?>個
+    <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>">
+    合計<?PHP print $pro_price[$i]*$kazu[$i]; ?>円
+    <input type="checkbox" name="sakujo<?PHP print $i;?>">
     <br>
     <?PHP } ?>
     <br>
