@@ -43,7 +43,7 @@ try
  
   $dbh = null;   
 
-print'商品一覧 <br /><br />';
+  print'商品一覧 <br /><br />';
 
   while(true)
   {
@@ -58,17 +58,15 @@ print'商品一覧 <br /><br />';
   print '</a>';
   print '<br />';
   print '<br>';
-}
+  }
   print '<a href="shop_cartlook.php">カートを見る</a><br>';
 
-}
-catch(Exception $e)
-{
-print $e;
-exit();
-}
-
+  }
+  catch(Exception $e)
+  {
+  print $e;
+  exit();
+  }
 ?>
-
 </body>
 </html>

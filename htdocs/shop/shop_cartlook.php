@@ -69,15 +69,17 @@
 
   カートの中身 <br>
   <br>
-  <form action="post" action="kazu_change.php">
+  <form method="post" action="kazu_change.php">
     <?PHP for($i=0;$i<$max;$i++) { ?>
     <?PHP print $pro_name[$i]; ?>
     <?PHP print $pro_gazou[$i]; ?>
     <?PHP print $pro_price[$i]; ?>円
-    <?PHP print $kazu[$i];?>
-    <input type="text" name="kazu<?PHP print $i; ?> value=<?PHP print $kazu[$i]; ?>">
+    <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>">
+    <?PHP print $kazu[$i];?>個
     <br>
     <?PHP } ?>
+    <br>
+    <input type="hidden" name="max" value="<?PHP print $max; ?>">
     <input type="button" onclick="history.back()" value="戻る">
     <input type="submit" value="数量変更"> <br>
   </form>
