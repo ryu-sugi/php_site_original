@@ -20,7 +20,7 @@
     $pro_name=htmlspecialchars($pro_name,ENT_QUOTES,'UTF-8');
     $pro_price=htmlspecialchars($pro_price,ENT_QUOTES,'UTF-8');
 
-    $dsn='mysql:dbname=shop;host=172.18.0.2;port=3306;charset=utf8';
+    $dsn='mysql:dbname=shop;host=172.18.0.3;port=3306;charset=utf8';
     $user='root';
     $password='password';
     $dbh=new PDO($dsn, $user, $password);

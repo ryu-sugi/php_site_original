@@ -15,7 +15,7 @@
   try
   {
 
-    $dsn='mysql:dbname=shop;host=172.18.0.2;port=3306;charset=utf8';
+    $dsn='mysql:dbname=shop;host=172.18.0.3;port=3306;charset=utf8';
     $user = 'root';
     $password = 'password';
     $dbh = new PDO($dsn, $user, $password);
@@ -24,10 +24,9 @@
     $sql = 'SELECT code,name,price FROM mst_product WHERE 1';
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
-   
-    $dbh = null;   
-
-  print'商品一覧 <br /><br />';
+    
+    print'商品一覧 <br /><br />';
+    $dbh = null;
 
   print'<form method="post" action="pro_branch.php">';
     while(true)
