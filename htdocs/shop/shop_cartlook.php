@@ -83,21 +83,33 @@
   カートの中身 <br>
   <br>
   <form method="post" action="kazu_change.php">
-    <?PHP for($i=0;$i<$max;$i++) { ?>
-    <?PHP print $pro_name[$i]; ?>
-    <?PHP print $pro_gazou[$i]; ?>
-    <?PHP print $pro_price[$i]; ?>円
-    <?PHP print $kazu[$i];?>個
-    <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>">
-    合計<?PHP print $pro_price[$i]*$kazu[$i]; ?>円
-    <input type="checkbox" name="sakujo<?PHP print $i;?>">
-    <br>
-    <?PHP } ?>
-    <br>
+    <table border="1">
+      <tr>
+        <td>商品</td>
+        <td>商品画像</td>
+        <td>価格</td>
+        <td>数量</td>
+        <td>小計</td>
+        <td>削除</td>
+      </tr>
+      <?PHP for($i=0;$i<$max;$i++) { ?>
+      <tr>
+     <td> <?PHP print $pro_name[$i]; ?> </td>
+     <td> <?PHP print $pro_gazou[$i]; ?> </td>
+     <td> <?PHP print $pro_price[$i]; ?>円 </td>
+      <td> <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>"> </td>
+      <td> 合計<?PHP print $pro_price[$i]*$kazu[$i]; ?>円 </td>
+      <td> <input type="checkbox" name="sakujo<?PHP print $i;?>"> </td>
+      </tr>
+      <?PHP } ?>
+      <br>
+    </table>
     <input type="hidden" name="max" value="<?PHP print $max; ?>">
     <input type="button" onclick="history.back()" value="戻る">
     <input type="submit" value="数量変更"> <br>
   </form>
+  <br>
+  <a href="shop_form.html">ご購入手続きへ進む</a>
 
 </body>
 </html>
