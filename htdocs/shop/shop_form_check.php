@@ -41,10 +41,11 @@
     print '<br> <br>';
   }
 
-  if ($postal1=='') {
+  if(preg_match('/^[0-9]+$/',$postal1)==0) {
     print '郵便番号は半角数字で入力してください。 <br> <br>';
     $okflg = false;
-  } else {
+  } 
+  else {
     print '郵便番号 <br>';
     print $postal1;
     print '-';
@@ -52,7 +53,7 @@
     print '<br> <br>';
   }
 
-  if  ($postal2=='') {
+  if(preg_match('/^[0-9]+$/',$postal2)==0) {
     print '郵便番号は半角数字で入力してください。 <br> <br>';
     $okflg = false;
   }
@@ -60,16 +61,18 @@
   if ($address == '') {
     print '住所が入力されていません。 <br> <br>';
     $okflg = false;
-  } else {
+  } 
+  else {
     print '住所 <br>';
     print $address;
     print '<br> <br>';
   }
 
-  if ($tel=='') {
+  if(preg_match('/^[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}$/',$tel)==0) {
     print '電話番号を正確に入力してください。 <br> <br>';
     $okflg = false;
-  } else {
+  } 
+  else {
     print '電話番号 <br>';
     print $tel;
     print '<br> <br>';
