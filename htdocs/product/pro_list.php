@@ -15,7 +15,7 @@
   try
   {
 
-    $dsn='mysql:dbname=shop;host=172.18.0.3;port=3306;charset=utf8';
+    $dsn='mysql:dbname=shop;host=172.18.0.2;port=3306;charset=utf8';
     $user = 'root';
     $password = 'password';
     $dbh = new PDO($dsn, $user, $password);
