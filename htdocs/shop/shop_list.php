@@ -36,7 +36,7 @@ try
   $dbh = new PDO($dsn, $user, $password);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
-  $sql = 'SELECT code,name,price FROM mst_product WHERE 1';
+  $sql = 'SELECT code,name,price,gazou FROM mst_product WHERE 1';
   $stmt = $dbh->prepare($sql);
   $stmt->execute();
  
@@ -51,6 +51,7 @@ try
   {
     break;
   }
+  
   print '<a href="shop_product.php?procode='.$rec['code'].'">';
   print $rec['name'].'___';
   print $rec['price'].'円';
