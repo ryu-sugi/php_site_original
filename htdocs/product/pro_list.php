@@ -57,6 +57,6 @@
       <input type="submit" name="delete" value="削除">
   </form>
 
-  <a href="../pro_login/pro_top.php">トップメニューへ</a> 
+  <a href="../index.php">トップメニューへ</a> 
 
 </body>

@@ -41,6 +41,7 @@
       <nav id="menubar">
         <ul>
           <li><a href="index.php">トップページ</a></li>
+          <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
           <li><a href="shop/shop_list.php">商品一覧</a></li>
           <li><a href="product/pro_list.php">商品管理</a></li>
         </ul>
@@ -51,36 +52,39 @@
       </div>
 
       <main>
-      <h2 class="">商品一覧</h2>
-        <div class="product-index">
-          <?PHP while (true) {
-            $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-            if ($rec == false) {
-              break;
-            } ?>
-            <?PHP print '<a href="shop_product.php?procode=' . $rec['code'] . '">' ?>
-            <?PHP print $rec['name'] . '：' ?>
-            <?PHP print $rec['price'] . '円' ?>
-            <?PHP print '<img src="product/gazou/' . $rec['gazou'] . '">' ?>
-            </a>
-            <br />
-            <br>
-          <?PHP } ?>
-          <a  href="shop_cartlook.php">カートを見る</a><br>
+        <h2 class="">商品一覧</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 d-flex justify-content-around table ">
+              <?PHP while (true) { ?>
+                <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($rec == false) {
+                  break;
+                } ?>
+                <?PHP print '<a href="shop/shop_product.php?procode=' . $rec['code'] . '">';
+                '</a>' ?>
+                <?PHP print '商品名' . $rec['name'] . '<br>' ?>
+                <?PHP print '<img src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
+                <?PHP print '価格' . $rec['price'] . ' 円' ?>
+              <?PHP } ?>
+            </div>
+          </div>
         </div>
-      </main>
+    </div>
+    <a href="shop/shop_cartlook.php">カートを見る</a><br>
+    </main>
 
-      <footer class="footer">
-        <ul class="icon">
-          <ul>
-            <li><a href="index.html">トップページ</a></li>
-            <li><a href="product/pro_list.php">商品一覧</a></li>
-            <li><a href="shop/shop_list.php">購入する為の画面</a></li>
-          </ul>
-
+    <footer class="footer">
+      <ul class="icon">
+        <ul>
+          <li><a href="index.html">トップページ</a></li>
+          <li><a href="product/pro_list.php">商品一覧</a></li>
+          <li><a href="shop/shop_list.php">購入する為の画面</a></li>
         </ul>
-        <small>Copyright&copy; Ryuji </small>
-      </footer>
+
+      </ul>
+      <small>Copyright&copy; Ryuji </small>
+    </footer>
     </div>
 </body>
 
