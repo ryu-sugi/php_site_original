@@ -26,12 +26,12 @@
   ?>
 
   <header>
-    <h1><a href="index.html">PHP 雑貨 サイト</a></h1>
+  <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
   </header>
 
   <nav id="menubar">
     <ul>
-      <li><a href="index.php">トップページ</a></li>
+      <li><a href="../index.php">トップページ</a></li>
       <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
       <li><a href="shop/shop_list.php">商品一覧</a></li>
       <li><a href="product/pro_list.php">商品管理</a></li>
@@ -75,7 +75,7 @@
               print $postal2;
             } ?>
           </li>
-          <li class="list-group-item">
+          <li class=" list-group-item ">
             <?PHP if ($address == '') {
               print '住所が入力されていません。';
               $okflg = false;
@@ -102,9 +102,9 @@
     print '<input type="hidden" name="postal2" value="' . $postal2 . '">';
     print '<input type="hidden" name="address" value="' . $address . '">';
     print '<input type="hidden" name="tel" value="' . $tel . '">';
-    print '<div class="d-flex justify-content-center ">';
-    print '<input  type="button" onclick="history.back()" value="戻る">';
-    print '<input  type="submit" value="OK">';
+    print '<div class="d-flex justify-content-center justify-content-around mt-3 ">';
+    print '<input class="btn btn-primary type="button" onclick="history.back()" value="戻る">';
+    print '<input class="btn btn-primary  type="submit" value="OK">';
     print '</div>';
     print '</form>';
     } else {
@@ -115,7 +115,7 @@
       </div>
     </div>
   </div>
-  <footer>
+  <footer class="fixed-bottom">
     <ul class="d-flex justify-content-center list-unstyled">
       <li><a href="index.html">トップページ</a></li>
       <li><a href="product/pro_list.php">商品一覧</a></li>

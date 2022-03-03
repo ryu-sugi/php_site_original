@@ -69,6 +69,7 @@
 
   ?>
 
+<div class="form-control">
   商品情報参照 <br>
   <br>
   商品コード <br>
@@ -83,6 +84,7 @@
   <?php print $disp_gazou; ?>
   <br>
   <br>
+</div>
   <form>
     <input type="button" onclick="history.back()" value="戻る">
   </form>

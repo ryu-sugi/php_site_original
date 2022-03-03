@@ -67,7 +67,7 @@ session_regenerate_id(true);
   ?>
 
 <header>
-        <h1><a href="index.html">PHP 雑貨 サイト</a></h1>
+        <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
       </header>
 
       <nav id="menubar">
@@ -112,11 +112,11 @@ session_regenerate_id(true);
 
     <div class="my-5 d-flex justify-content-center ">
       <input type="hidden" name="max" value="<?PHP print $max; ?>">
-      <input type="button" class="ml-3 d-grid btn btn-success text-white mx-2 " onclick="history.back()" value="戻る">
-      <input type="submit" class="ml-3 d-grid btn btn-success text-white" value="数量変更"> <br>
+      <input type="button" class="ml-3 d-grid btn btn-primary text-white mx-2 " onclick="history.back()" value="戻る">
+      <input type="submit" class="ml-3 d-grid btn btn-primary text-white" value="数量変更"> <br>
       </form>
       <br>
-      <button type="button" class="d-grid btn btn-success mx-2 pt-2">
+      <button type="button" class="d-grid btn btn-primary mx-2 pt-2">
         <a href="shop_form.html" class="text-white text-decoration-none">ご購入手続きへ進む</a>
       </button>
     </div>

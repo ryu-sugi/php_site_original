@@ -40,7 +40,7 @@
   <form>
     <div id="container">
       <header>
-        <h1><a href="index.html">PHP 雑貨 サイト</a></h1>
+      <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="index.php">PHP 雑貨 サイト</a></h1>
       </header>
 
       <nav id="menubar">
@@ -76,10 +76,9 @@
           </div>
         </div>
     </div>
-    <button type="button" class="d-flex d-grid btn btn-success mx-auto ">
+    <button type="button" class="d-flex d-grid btn btn-primary mx-auto ">
       <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a><br>
     </button>
-
     </main>
 
     <footer>
