@@ -58,7 +58,7 @@
 
       <main>
         <h2>商品一覧</h2>
-        <div class="container-product">
+        <div class="container-product mt-5">
           <div class="row">
             <div class="col-md-3 d-flex justify-content-around table ">
               <?PHP while (true) { ?>
@@ -68,16 +68,23 @@
                 } ?>
                 <?PHP print '<a class="text-decoration-none " href="shop/shop_product.php?procode=' . $rec['code'] . '">';
                 '</a>' ?>
-                <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
-                <?PHP print '<img src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
-                <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
-              <?PHP } ?>
+                <?PHP print ' <div class="border">' ?>
+                  <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
+                  <?PHP print '</div>' ?>
+                  <?PHP print ' <div class="border">' ?>
+                  <?PHP print '<img src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
+                  <?PHP print '</div>' ?>
+                  <?PHP print ' <div class="border">' ?>
+                  <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
+                  <?PHP print '</div>' ?>
+
+                  <?PHP } ?>
             </div>
           </div>
         </div>
     </div>
-    <button type="button" class="d-flex d-grid btn btn-primary mx-auto ">
-      <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a><br>
+    <button type="button" class="d-flex d-grid btn btn-primary mx-auto mb-5 ">
+      <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a>
     </button>
     </main>
 

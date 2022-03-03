@@ -66,56 +66,56 @@ session_regenerate_id(true);
 
   ?>
 
-<header>
-        <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
-      </header>
+  <header>
+    <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
+  </header>
 
-      <nav id="menubar">
-        <ul>
-          <li><a href="index.php">トップページ</a></li>
-          <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
-          <li><a href="shop/shop_list.php">商品一覧</a></li>
-          <li><a href="product/pro_list.php">商品管理</a></li>
-        </ul>
-      </nav>
+  <nav id="menubar">
+    <ul>
+      <li><a href="index.php">トップページ</a></li>
+      <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
+      <li><a href="shop/shop_list.php">商品一覧</a></li>
+      <li><a href="product/pro_list.php">商品管理</a></li>
+    </ul>
+  </nav>
 
   <div class="container">
     <h3 class="my-5 d-flex justify-content-center">カートの中身</h3>
     <div class="d-flex align-items-center justify-content-center">
       <div class="col-md-6">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>商品</th>
-              <th>商品画像</th>
-              <th>価格</th>
-              <th>数量</th>
-              <th>小計</th>
-              <th>削除</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?PHP for ($i = 0; $i < $max; $i++) { ?>
+        <form method="post" action="kazu_change.php">
+          <table class="table table-bordered">
+            <thead>
               <tr>
-                <td> <?PHP print $pro_name[$i]; ?> </td>
-                <td> <?PHP print $pro_gazou[$i]; ?> </td>
-                <td> <?PHP print $pro_price[$i]; ?>円 </td>
-                <td> <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>"> </td>
-                <td> 合計<?PHP print $pro_price[$i] * $kazu[$i]; ?>円 </td>
-                <td> <input type="checkbox" name="sakujo<?PHP print $i; ?>"> </td>
+                <th>商品</th>
+                <th>商品画像</th>
+                <th>価格</th>
+                <th>数量</th>
+                <th>小計</th>
+                <th>削除</th>
               </tr>
-            <?PHP } ?>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <?PHP for ($i = 0; $i < $max; $i++) { ?>
+                <tr>
+                  <td> <?PHP print $pro_name[$i]; ?> </td>
+                  <td> <?PHP print $pro_gazou[$i]; ?> </td>
+                  <td> <?PHP print $pro_price[$i]; ?>円 </td>
+                  <td> <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>"> </td>
+                  <td> 合計<?PHP print $pro_price[$i] * $kazu[$i]; ?>円 </td>
+                  <td> <input type="checkbox" name="sakujo<?PHP print $i; ?>"> </td>
+                </tr>
+              <?PHP } ?>
+            </tbody>
+          </table>
       </div>
     </div>
-
     <div class="my-5 d-flex justify-content-center ">
       <input type="hidden" name="max" value="<?PHP print $max; ?>">
-      <input type="button" class="ml-3 d-grid btn btn-primary text-white mx-2 " onclick="history.back()" value="戻る">
       <input type="submit" class="ml-3 d-grid btn btn-primary text-white" value="数量変更"> <br>
-      </form>
+      <input type="button" class="ml-3 d-grid btn btn-primary text-white mx-2 " onclick="history.back()" value="戻る">
       <br>
+      </form>
       <button type="button" class="d-grid btn btn-primary mx-2 pt-2">
         <a href="shop_form.html" class="text-white text-decoration-none">ご購入手続きへ進む</a>
       </button>
@@ -123,19 +123,14 @@ session_regenerate_id(true);
 
     <footer>
       <ul class="d-flex justify-content-center list-unstyled">
-          <li><a href="index.html">トップページ</a></li>
-          <li ><a href="product/pro_list.php">商品一覧</a></li>
-          <li><a href="shop/shop_list.php">購入する為の画面</a></li>
-        </ul>
-
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="product/pro_list.php">商品一覧</a></li>
+        <li><a href="shop/shop_list.php">購入する為の画面</a></li>
       </ul>
       <small>Copyright&copy; Ryuji </small>
     </footer>
-    </div>
-</body>
-
-
   </div>
-</body>
+  </div>
 
+</body>
 </html>
