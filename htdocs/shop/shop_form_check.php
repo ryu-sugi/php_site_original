@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>PHP SHOP SITE</title>
 </head>
 
@@ -21,64 +23,78 @@
   $address = $post['address'];
   $tel = $post['tel'];
 
-  $okflg = true;
+  ?>
 
-  if ($onamae == '') {
-    print 'お名前が入力されていません。 <br> <br>';
-    $okflg = false;
-  } else {
-    print 'お名前 <br>';
-    print $onamae;
-    print '<br> <br>';
-  }
+  <header>
+    <h1><a href="index.html">PHP 雑貨 サイト</a></h1>
+  </header>
 
-  if (preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9._-]+)+$/', $email) == 0) {
-    print 'メールアドレスを正確に入力してください。 <br> <br>';
-    $okflg = false;
-  } else {
-    print 'メールアドレス <br>';
-    print $email;
-    print '<br> <br>';
-  }
+  <nav id="menubar">
+    <ul>
+      <li><a href="index.php">トップページ</a></li>
+      <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
+      <li><a href="shop/shop_list.php">商品一覧</a></li>
+      <li><a href="product/pro_list.php">商品管理</a></li>
+    </ul>
+  </nav>
 
-  if(preg_match('/^[0-9]+$/',$postal1)==0) {
-    print '郵便番号は半角数字で入力してください。 <br> <br>';
-    $okflg = false;
-  } 
-  else {
-    print '郵便番号 <br>';
-    print $postal1;
-    print '-';
-    print $postal2;
-    print '<br> <br>';
-  }
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h3 class="mb-5 text-center">購入確認画面</h3>
+        <h4 class="mb-5 text-center">お間違いがないか確認してください</h4>
+        <ul class="list-group">
+          <li class="list-group-item">
 
-  if(preg_match('/^[0-9]+$/',$postal2)==0) {
-    print '郵便番号は半角数字で入力してください。 <br> <br>';
-    $okflg = false;
-  }
-
-  if ($address == '') {
-    print '住所が入力されていません。 <br> <br>';
-    $okflg = false;
-  } 
-  else {
-    print '住所 <br>';
-    print $address;
-    print '<br> <br>';
-  }
-
-  if(preg_match('/^[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}$/',$tel)==0) {
-    print '電話番号を正確に入力してください。 <br> <br>';
-    $okflg = false;
-  } 
-  else {
-    print '電話番号 <br>';
-    print $tel;
-    print '<br> <br>';
-  }
-
-  if ($okflg == true) {
+            <?PHP $okflg = true; ?>
+            <?PHP if ($onamae == '') {
+              print 'お名前が入力されていません。 <br> <br>';
+              $okflg = false;
+            } else {
+              print 'お名前 : ';
+              print $onamae;
+            } ?>
+          </li>
+          <li class="list-group-item">
+            <?PHP if (preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9._-]+)+$/', $email) == 0) {
+              print 'メールアドレスを正確に入力してください';
+              $okflg = false;
+            } else {
+              print 'メールアドレス : ';
+              print $email;
+            } ?>
+          <li class="list-group-item">
+            <?PHP if (preg_match('/^[0-9]+$/', $postal1) == 0) {
+              if (preg_match('/^[0-9]+$/', $postal2) == 0)
+                print '郵便番号は半角数字で入力してください。';
+              $okflg = false;
+            } else {
+              print '郵便番号 : ';
+              print $postal1;
+              print '-';
+              print $postal2;
+            } ?>
+          </li>
+          <li class="list-group-item">
+            <?PHP if ($address == '') {
+              print '住所が入力されていません。';
+              $okflg = false;
+            } else {
+              print '住所 : ';
+              print $address;
+            } ?>
+          </li>
+          <li class="list-group-item">
+            <?PHP if (preg_match('/^[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}$/', $tel) == 0) {
+              print '電話番号を正確に入力してください。';
+              $okflg = false;
+            } else {
+              print '電話番号 : ';
+              print $tel;
+            } ?>
+          </li>
+          </ul>
+<?PHP if ($okflg == true) {
     print '<form method="post" action="shop_form_done.php">';
     print '<input type="hidden" name="onamae" value="' . $onamae . '">';
     print '<input type="hidden" name="email" value="' . $email . '">';
@@ -86,18 +102,29 @@
     print '<input type="hidden" name="postal2" value="' . $postal2 . '">';
     print '<input type="hidden" name="address" value="' . $address . '">';
     print '<input type="hidden" name="tel" value="' . $tel . '">';
-    print '<input type="button" onclick="history.back()" value="戻る">';
-    print '<input type="submit" value="OK">';
+    print '<div class="d-flex justify-content-center ">';
+    print '<input  type="button" onclick="history.back()" value="戻る">';
+    print '<input  type="submit" value="OK">';
+    print '</div>';
     print '</form>';
-  } else {
+    } else {
     print '<form>';
     print '<input type="button" onclick="history.back()" value="戻る">';
     print '</form>';
-  }
-
-
-  ?>
-
+    } ?>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <ul class="d-flex justify-content-center list-unstyled">
+      <li><a href="index.html">トップページ</a></li>
+      <li><a href="product/pro_list.php">商品一覧</a></li>
+      <li><a href="shop/shop_list.php">購入する為の画面</a></li>
+    </ul>
+    
+  </ul>
+  <small>Copyright&copy; Ryuji </small>
+</footer>
 </body>
 
 </html>

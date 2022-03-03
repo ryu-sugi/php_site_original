@@ -5,8 +5,10 @@ html, body {
   list-style: none;
 }
 
+
 header h1 {
   text-align: center;
+  color: black;
 }
 
 a:hover {
@@ -33,7 +35,6 @@ ul {
   display: inline-block;
   /*メニューを横並びにする指定*/
   text-align: center;
-  /*テキストをセンタリング*/
   position: relative;
 }
 
@@ -92,9 +93,6 @@ footer a {
 }
 
 /*アイコン１個あたりの設定*/
-ul.icon li {
-  display: inline-block;
-}
 
 .clearfix::after {
   content: "";
@@ -113,6 +111,7 @@ footer small {
 /*リンクテキストの設定*/
 #menubar a {
   padding: 0 20px;
+  color: black;
   /*上下、左右へのテキスト内にとる余白。*/
 }
 
@@ -144,3 +143,7 @@ main {
 }
 
 /* } */
+
+.container-product a {
+  color: black;
+}

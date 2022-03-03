@@ -1,3 +1,8 @@
+<?PHP
+  session_start();
+  session_regenerate_id(true);
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -52,8 +57,8 @@
       </div>
 
       <main>
-        <h2 class="">商品一覧</h2>
-        <div class="container">
+        <h2>商品一覧</h2>
+        <div class="container-product">
           <div class="row">
             <div class="col-md-3 d-flex justify-content-around table ">
               <?PHP while (true) { ?>
@@ -61,24 +66,26 @@
                 if ($rec == false) {
                   break;
                 } ?>
-                <?PHP print '<a href="shop/shop_product.php?procode=' . $rec['code'] . '">';
+                <?PHP print '<a class="text-decoration-none " href="shop/shop_product.php?procode=' . $rec['code'] . '">';
                 '</a>' ?>
-                <?PHP print '商品名' . $rec['name'] . '<br>' ?>
+                <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
                 <?PHP print '<img src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
-                <?PHP print '価格' . $rec['price'] . ' 円' ?>
+                <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
               <?PHP } ?>
             </div>
           </div>
         </div>
     </div>
-    <a href="shop/shop_cartlook.php">カートを見る</a><br>
+    <button type="button" class="d-flex d-grid btn btn-success mx-auto ">
+      <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a><br>
+    </button>
+
     </main>
 
-    <footer class="footer">
-      <ul class="icon">
-        <ul>
+    <footer>
+      <ul class="d-flex justify-content-center list-unstyled">
           <li><a href="index.html">トップページ</a></li>
-          <li><a href="product/pro_list.php">商品一覧</a></li>
+          <li ><a href="product/pro_list.php">商品一覧</a></li>
           <li><a href="shop/shop_list.php">購入する為の画面</a></li>
         </ul>
 
