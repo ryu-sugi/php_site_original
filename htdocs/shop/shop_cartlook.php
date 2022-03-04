@@ -112,7 +112,7 @@ session_regenerate_id(true);
     </div>
     <div class="my-5 d-flex justify-content-center ">
       <input type="hidden" name="max" value="<?PHP print $max; ?>">
-      <input type="button" class="ml-3 d-grid btn btn-primary text-white  " onclick="history.back()" value="戻る">
+      <input type="button" class="ml-3 d-grid btn btn-primary text-white" onclick="history.back()" value="戻る">
       <input type="submit" class="ml-3 d-grid btn btn-primary text-white mx-2" value="数量変更">
       </form>
       <button type="button" class="d-grid btn btn-primary mx-2 pt-2">
