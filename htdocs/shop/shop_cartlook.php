@@ -72,10 +72,10 @@ session_regenerate_id(true);
 
   <nav id="menubar">
     <ul>
-      <li><a href="index.php">トップページ</a></li>
-      <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
-      <li><a href="shop/shop_list.php">商品一覧</a></li>
-      <li><a href="product/pro_list.php">商品管理</a></li>
+      <li><a href="../index.php">トップページ</a></li>
+      <li><a href="../shop/shop_cartlook.php">カート(購入)</a></li>
+      <li><a href="../shop/shop_list.php">商品一覧</a></li>
+      <li><a href="../product/pro_list.php">商品管理</a></li>
     </ul>
   </nav>
 
@@ -112,9 +112,8 @@ session_regenerate_id(true);
     </div>
     <div class="my-5 d-flex justify-content-center ">
       <input type="hidden" name="max" value="<?PHP print $max; ?>">
-      <input type="submit" class="ml-3 d-grid btn btn-primary text-white" value="数量変更"> <br>
-      <input type="button" class="ml-3 d-grid btn btn-primary text-white mx-2 " onclick="history.back()" value="戻る">
-      <br>
+      <input type="button" class="ml-3 d-grid btn btn-primary text-white  " onclick="history.back()" value="戻る">
+      <input type="submit" class="ml-3 d-grid btn btn-primary text-white mx-2" value="数量変更">
       </form>
       <button type="button" class="d-grid btn btn-primary mx-2 pt-2">
         <a href="shop_form.html" class="text-white text-decoration-none">ご購入手続きへ進む</a>
@@ -127,7 +126,7 @@ session_regenerate_id(true);
         <li><a href="product/pro_list.php">商品一覧</a></li>
         <li><a href="shop/shop_list.php">購入する為の画面</a></li>
       </ul>
-      <small>Copyright&copy; Ryuji </small>
+      <small>Copyright&copy; Ryuji</small>
     </footer>
   </div>
   </div>

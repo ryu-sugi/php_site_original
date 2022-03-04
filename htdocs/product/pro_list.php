@@ -27,7 +27,6 @@
     $stmt->execute();
 
     $dbh = null;
-
   } catch (Exception $e) {
     print $e;
     exit();
@@ -51,7 +50,6 @@
     <h3 class="my-5 d-flex justify-content-center">カートの中身</h3>
     <div class="d-flex justify-content-center">
       <div class="col-md-6">
-        <form method="post" action="kazu_change.php">
           <table class="table table-bordered">
             <thead>
               <tr>
@@ -63,32 +61,30 @@
             </thead>
             <tbody>
 
-              <form method="post" action="pro_branch.php">
-                <?PHP while (true) { ?>
-                  <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC) ?>
-                  <?PHP if ($rec == false) { ?>
-                    <?PHP break; ?>
-                  <?PHP  } ?>
-                  <tr>
-                    <td> <?PHP print '<input type="radio" aria-label="Radio button for following text input" name="procode" value="' . $rec['code'] . '">' ?> </td>
-                    <td> <?PHP print $rec['name'] ?>
-                    <td> <?PHP print '<img src="../product/gazou/' . $rec['gazou'] . '">' ?> </td>
-                    <td> <?PHP print $rec['price'] . '円' ?> </td>
-                  </tr>
-                <?PHP  } ?>
-            </tbody>
+          <form method="post" action="pro_branch.php">
+            <?PHP while (true) { ?>
+              <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC) ?>
+              <?PHP if ($rec == false) { ?>
+                <?PHP break; ?>
+              <?PHP  } ?>
+              <tr>
+                <td> <?PHP print '<input type="radio" name="procode" value="' . $rec['code'] . '">' ?> </td>
+                <td> <?PHP print $rec['name'] ?>
+                <td> <?PHP print '<img src="../product/gazou/' . $rec['gazou'] . '">' ?> </td>
+                <td> <?PHP print $rec['price'] . '円' ?> </td>
+              </tr>
+            <?PHP  } ?>
+        </tbody>
       </div>
     </div>
-  </div>
-</form>
-  
-  <div class="my-5 d-flex justify-content-center ">
-    <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="disp" value="参照">
-    <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="add" value="追加">
-    <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="edit" value="修正">
-    <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="delete" value="削除">
-  </div>
-</div>
+
+      <div class="my-5 d-flex justify-content-center ">
+        <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="disp" value="参照">
+        <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="add" value="追加">
+        <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="edit" value="修正">
+        <input class="d-grid btn btn-primary mx-2 pt-2 " type="submit" name="delete" value="削除">
+      </div>
+    </form>
 
   <!-- <footer class="">
     <ul class="d-flex justify-content-center list-unstyled">
@@ -99,6 +95,7 @@
     <small>Copyright&copy; Ryuji </small>
   </footer> -->
 
+  </div>
 </body>
 
 </html>
