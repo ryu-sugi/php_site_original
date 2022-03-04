@@ -10,6 +10,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>PHP SHOP SITE</title>
 </head>
 <body>
@@ -27,14 +29,6 @@
     $postal2=$post['postal2'];
     $address=$post['address'];
     $tel=$post['tel'];
-
-    print $onamae. '様 <br>';
-    print 'ご注文ありがとうございました。 <br>';
-    print $email. 'にメールを送りましたのでご確認ください。 <br>';
-    print '商品は以下の住所に発送いたします。 <br>';
-    print $postal1.'-'.$postal2. '<br>';
-    print $address. '<br>';
-    print $tel. '<br>';
     
     $cart= $_SESSION['cart'];
     $kazu= $_SESSION['kazu'];
@@ -117,7 +111,62 @@
   
   ?>
 
-  <br>
-  <a href="shop_list.php">商品画面へ</a>
+<header>
+    <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
+  </header>
+
+  <nav id="menubar">
+    <ul>
+      <li><a href="../index.php">トップページ</a></li>
+      <li><a href="../shop/shop_cartlook.php">カート(購入)</a></li>
+      <li><a href="../shop/shop_list.php">商品一覧</a></li>
+      <li><a href="../product/pro_list.php">商品管理</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h3 class="my-5 d-flex justify-content-center">ご注文ありがとうございました！</h3>
+    <h5 class="d-flex justify-content-center">商品は以下の住所に発送いたします。</h5>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="col-md-6">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>お名前</th>
+                <th>メール</th>
+                <th>郵便番号</th>
+                <th>住所</th>
+                <th>電話番号</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <td><?PHP print $onamae. '様'?></td>
+                <td> <?php print  $email. 'にメールを送りましたのでご確認ください。' ?></td>
+                <td> <?php print $postal1.'-'.$postal2 ?> </td>
+                <td> <?php print $address ?></td>
+                <td> <?php print $tel  ?></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    <div class="my-1 d-flex justify-content-center">
+    <a class="d-grid btn btn-primary text-white" href="shop_list.php">商品画面へ</a>
+    </div>
+
+
+  <footer class="fixed-bottom">
+      <ul class="d-flex justify-content-center list-unstyled">
+        <li><a href="../index.html">トップページ</a></li>
+        <li><a href="../product/pro_list.php">商品一覧</a></li>
+        <li><a href="../shop/shop_list.php">購入する為の画面</a></li>
+      </ul>
+      <small>Copyright&copy; Ryuji</small>
+    </footer>
+  </div>
+  
+</div>
 </body>
 </html>

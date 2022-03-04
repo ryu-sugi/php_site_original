@@ -104,7 +104,7 @@
     print '<input type="hidden" name="tel" value="' . $tel . '">';
     print '<div class="d-flex justify-content-center justify-content-around mt-3 ">';
     print '<input class="btn btn-primary type="button" onclick="history.back()" value="戻る">';
-    print '<input class="btn btn-primary  type="submit" value="OK">';
+    print '<input class="btn btn-primary"  type="submit" value="OK">';
     print '</div>';
     print '</form>';
     } else {
