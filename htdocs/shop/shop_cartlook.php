@@ -81,6 +81,7 @@ session_regenerate_id(true);
 
   <div class="container">
     <h3 class="my-5 d-flex justify-content-center">カートの中身</h3>
+    <form method="post" action="kazu_change.php">
     <div class="d-flex align-items-center justify-content-center">
       <div class="col-md-6">
           <table class="table table-bordered">
@@ -97,12 +98,12 @@ session_regenerate_id(true);
             <tbody>
               <?PHP for ($i = 0; $i < $max; $i++) { ?>
                 <tr>
-                  <td> <?PHP print $pro_name[$i] ?> </td>
-                  <td> <?PHP print $pro_gazou[$i] ?> </td>
-                  <td> <?PHP print $pro_price[$i] ?>円 </td>
-                  <td> <input type="text" name="kazu<?PHP print $i ?>" value="<?PHP print $kazu[$i] ?>"> </td>
-                  <td> 合計<?PHP print $pro_price[$i] * $kazu[$i] ?>円 </td>
-                  <td> <input type="checkbox" name="sakujo<?PHP print $i ?>"> </td>
+                  <td> <?PHP print $pro_name[$i]; ?> </td>
+                  <td> <?PHP print $pro_gazou[$i]; ?> </td>
+                  <td> <?PHP print $pro_price[$i]; ?>円 </td>
+                  <td> <input type="text" name="kazu<?PHP print $i; ?>" value="<?PHP print $kazu[$i]; ?>"> </td>
+                  <td> 合計<?PHP print $pro_price[$i] * $kazu[$i]; ?>円 </td>
+                  <td> <input type="checkbox" name="sakujo<?PHP print $i; ?>"> </td>
                 </tr>
               <?PHP } ?>
             </tbody>
@@ -110,7 +111,7 @@ session_regenerate_id(true);
       </div>
     </div>
     <div class="my-5 d-flex justify-content-center ">
-      <input type="hidden" name="max" value="<?PHP print $max ?>">
+      <input type="hidden" name="max" value="<?PHP print $max; ?>">
       <input type="button" class="ml-3 d-grid btn btn-primary text-white" onclick="history.back()" value="戻る">
       <input type="submit" class="ml-3 d-grid btn btn-primary text-white mx-2" value="数量変更">
       </form>
