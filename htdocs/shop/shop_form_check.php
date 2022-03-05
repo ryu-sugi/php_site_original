@@ -26,7 +26,7 @@
   ?>
 
   <header>
-  <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
+  <h1><a class="bg-primary text-white rounded text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
   </header>
 
   <nav id="menubar">

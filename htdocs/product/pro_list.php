@@ -34,7 +34,7 @@
   ?>
 
   <header>
-    <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
+    <h1><a class="bg-primary text-white rounded text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
   </header>
 
   <nav id="menubar">
@@ -47,7 +47,7 @@
   </nav>
 
   <div class="container">
-    <h3 class="my-5 d-flex justify-content-center">カートの中身</h3>
+    <h3 class="text-cart mt-5 d-flex justify-content-center">カートの中身</h3>
     <div class="d-flex justify-content-center">
       <div class="col-md-6">
           <table class="table table-bordered">

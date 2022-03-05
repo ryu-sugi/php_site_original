@@ -68,6 +68,11 @@ main h2 {
   /* 下線の幅、線種、色 */
 }
 
+.text-cart, .text-purchase, .text-pro {
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid #ccc;
+}
+
 /*mainブロックのpタグ*/
 main p {
   margin-bottom: 40px;

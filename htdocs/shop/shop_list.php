@@ -39,7 +39,7 @@ session_regenerate_id(true);
   ?>
 
   <header>
-    <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
+    <h1><a class="bg-primary text-white rounded text-decoration-none" href="../index.php">PHP 雑貨 サイト</a></h1>
   </header>
 
   <nav id="menubar">
@@ -52,8 +52,8 @@ session_regenerate_id(true);
   </nav>
 
   <main>
-    <h2>商品一覧</h2>
-    <div class="container-product mt-5">
+    <div class="container">
+      <h3 class="text-pro my-5 d-flex justify-content-center">商品一覧</h3>
       <div class="row">
         <div class="col-md-3 d-flex justify-content-center table ">
           <?PHP while (true) { ?>

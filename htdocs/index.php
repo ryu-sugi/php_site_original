@@ -1,6 +1,6 @@
 <?PHP
-  session_start();
-  session_regenerate_id(true);
+session_start();
+session_regenerate_id(true);
 ?>
 
 <!DOCTYPE html>
@@ -40,61 +40,61 @@
   <form>
     <div id="container">
       <header>
-      <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="index.php">PHP 雑貨 サイト</a></h1>
-      
+        <h1><a class="bg-primary text-white rounded text-decoration-none" href="index.php">PHP 雑貨 サイト</a></h1>
+
         <ul class="mt-4 nav justify-content-center nav-justified " id="menubar">
           <li><a href="index.php">トップページ</a></li>
           <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
           <li><a href="shop/shop_list.php">出品商品一覧</a></li>
           <li><a href="product/pro_list.php">商品管理</a></li>
         </ul>
-    </header>
+      </header>
 
-    <div class="mainimg">
-      <div><img src="product/gazou/mainvisual01.jpg" style="width: 100%;" /></div>
-    </div>
-    
-    <main>
-      <h2>商品一覧</h2>
-    </main>
+      <div class="main-img">
+        <div><img src="product/gazou/mainvisual01.jpg" style="width: 100%;" /></div>
+      </div>
+
+      <main>
+        <h2>商品一覧</h2>
         <div class="container mt-5">
           <div class="row">
             <div class="col-md-3 table d-flex justify-content-around ">
-            <?PHP while (true) { ?>
-              <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+              <?PHP while (true) { ?>
+                <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC);
                 if ($rec == false) {
                   break;
                 } ?>
                 <?PHP print '<a class="text-decoration-none text-dark" href="shop/shop_product.php?procode=' . $rec['code'] . '">';
                 '</a>' ?>
                 <?PHP print ' <div class="border">' ?>
-                  <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
-                  <?PHP print '</div>' ?>
-                  <?PHP print ' <div class="border">' ?>
-                  <?PHP print '<img class="img-fluid" src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
-                  <?PHP print '</div>' ?>
-                  <?PHP print ' <div class="border">' ?>
-                  <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
-                  <?PHP print '</div>' ?>
-                  <?PHP } ?>
+                <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
+                <?PHP print '</div>' ?>
+                <?PHP print ' <div class="border">' ?>
+                <?PHP print '<img class="img-fluid" src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
+                <?PHP print '</div>' ?>
+                <?PHP print ' <div class="border">' ?>
+                <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
+                <?PHP print '</div>' ?>
+              <?PHP } ?>
             </div>
           </div>
         </div>
-    <button type="button" class="d-flex d-grid btn btn-primary mx-auto mb-5 ">
-      <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a>
-    </button>
+        <button type="button" class="d-flex d-grid btn btn-primary mx-auto mb-5 ">
+          <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a>
+        </button>
+      </main>
 
-    <footer>
-      <ul class="d-flex justify-content-center list-unstyled">
+      <footer>
+        <ul class="d-flex justify-content-center list-unstyled">
           <li><a href="index.html">トップページ</a></li>
-          <li ><a href="product/pro_list.php">商品一覧</a></li>
+          <li><a href="product/pro_list.php">商品一覧</a></li>
           <li><a href="shop/shop_list.php">購入する為の画面</a></li>
         </ul>
 
-      </ul>
-      <small>Copyright&copy; Ryuji </small>
-    </footer>
-  </div>
+        </ul>
+        <small>Copyright&copy; Ryuji </small>
+      </footer>
+    </div>
 </body>
 
 </html>
