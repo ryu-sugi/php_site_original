@@ -41,28 +41,27 @@
     <div id="container">
       <header>
       <h1><a class="bg-primary text-white rounded-pill text-decoration-none" href="index.php">PHP 雑貨 サイト</a></h1>
-      </header>
-
-      <nav id="menubar">
-        <ul>
+      
+        <ul class="mt-4 nav justify-content-center nav-justified " id="menubar">
           <li><a href="index.php">トップページ</a></li>
           <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
           <li><a href="shop/shop_list.php">出品商品一覧</a></li>
           <li><a href="product/pro_list.php">商品管理</a></li>
         </ul>
-      </nav>
+    </header>
 
-      <div class="mainimg">
-        <div><img src="product/gazou/mainvisual01.jpg" style="width: 100%;" /></div>
-      </div>
-
-      <main>
-        <h2>商品一覧</h2>
+    <div class="mainimg">
+      <div><img src="product/gazou/mainvisual01.jpg" style="width: 100%;" /></div>
+    </div>
+    
+    <main>
+      <h2>商品一覧</h2>
+    </main>
         <div class="container mt-5">
           <div class="row">
-            <div class="col-md-3 d-flex justify-content-around table ">
-              <?PHP while (true) { ?>
-                <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+            <div class="col-md-3 table d-flex justify-content-around ">
+            <?PHP while (true) { ?>
+              <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC);
                 if ($rec == false) {
                   break;
                 } ?>
@@ -84,7 +83,6 @@
     <button type="button" class="d-flex d-grid btn btn-primary mx-auto mb-5 ">
       <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a>
     </button>
-    </main>
 
     <footer>
       <ul class="d-flex justify-content-center list-unstyled">
