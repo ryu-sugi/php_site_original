@@ -60,10 +60,10 @@ session_regenerate_id(true);
 
   <nav id="menubar">
     <ul>
-      <li><a href="index.php">トップページ</a></li>
-      <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
-      <li><a href="shop/shop_list.php">商品一覧</a></li>
-      <li><a href="product/pro_list.php">商品管理</a></li>
+      <li><a href="../index.php">トップページ</a></li>
+      <li><a href="../shop/shop_cartlook.php">カート(購入)</a></li>
+      <li><a href="../shop/shop_list.php">商品一覧</a></li>
+      <li><a href="../product/pro_list.php">商品管理</a></li>
     </ul>
   </nav>
 
@@ -84,10 +84,10 @@ session_regenerate_id(true);
           </thead>
           <tbody>
             <tr>
-              <td> <?PHP print $pro_code; ?> </td>
-              <td> <?PHP print $pro_name; ?> </td>
-              <td> <?PHP print $pro_price; ?>円 </td>
-              <td> <?PHP print $disp_gazou; ?> </td>
+              <td> <?PHP print $pro_code ?> </td>
+              <td> <?PHP print $pro_name ?> </td>
+              <td> <?PHP print $pro_price ?>円 </td>
+              <td> <?PHP print $disp_gazou ?> </td>
             </tr>
           </tbody>
         </table>
@@ -96,7 +96,7 @@ session_regenerate_id(true);
   </div>
 
   <div class="my-5 d-flex justify-content-center ">
-  <a class="btn btn-primary text-decoration-none" href="shop_cartin.php?procode=' . $pro_code . '">カートに入れる</a>
+  <?PHP print '<a class="btn btn-primary text-decoration-none" href="shop_cartin.php?procode= '. $pro_code . '"> カートに入れる </a>' ?>
   <form class="d-flex justify-content-center " >
     <input class="btn btn-primary text-white mx-2" type="button" onclick="history.back()" value="戻る">
   </form>

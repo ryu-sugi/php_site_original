@@ -61,13 +61,13 @@ session_regenerate_id(true);
             if ($rec == false) {
               break;
             } ?>
-            <?PHP print '<a class="text-decoration-none " href="shop/shop_product.php?procode=' . $rec['code'] . '">';
+            <?PHP print '<a class="text-decoration-none " href="../shop/shop_product.php?procode=' . $rec['code'] . '">';
             '</a>' ?>
             <?PHP print ' <div class="border">' ?>
-            <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
+            <?PHP print '商品名 : ' . $rec['name'] ?>
             <?PHP print '</div>' ?>
             <?PHP print ' <div class="border">' ?>
-            <?PHP print '<img src="../product/gazou/' . $rec['gazou'] . '">' ?> <br>
+            <?PHP print '<img src="../product/gazou/' . $rec['gazou'] . '">' ?>
             <?PHP print '</div>' ?>
             <?PHP print ' <div class="border">' ?>
             <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
