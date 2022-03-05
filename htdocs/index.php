@@ -47,7 +47,7 @@
         <ul>
           <li><a href="index.php">トップページ</a></li>
           <li><a href="shop/shop_cartlook.php">カート(購入)</a></li>
-          <li><a href="shop/shop_list.php">商品一覧</a></li>
+          <li><a href="shop/shop_list.php">出品商品一覧</a></li>
           <li><a href="product/pro_list.php">商品管理</a></li>
         </ul>
       </nav>
@@ -58,7 +58,7 @@
 
       <main>
         <h2>商品一覧</h2>
-        <div class="container-product mt-5">
+        <div class="container mt-5">
           <div class="row">
             <div class="col-md-3 d-flex justify-content-around table ">
               <?PHP while (true) { ?>
@@ -66,23 +66,21 @@
                 if ($rec == false) {
                   break;
                 } ?>
-                <?PHP print '<a class="text-decoration-none " href="shop/shop_product.php?procode=' . $rec['code'] . '">';
+                <?PHP print '<a class="text-decoration-none text-dark" href="shop/shop_product.php?procode=' . $rec['code'] . '">';
                 '</a>' ?>
                 <?PHP print ' <div class="border">' ?>
                   <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
                   <?PHP print '</div>' ?>
                   <?PHP print ' <div class="border">' ?>
-                  <?PHP print '<img src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
+                  <?PHP print '<img class="img-fluid" src="product/gazou/' . $rec['gazou'] . '">' ?> <br>
                   <?PHP print '</div>' ?>
                   <?PHP print ' <div class="border">' ?>
                   <?PHP print '価格 : ' . $rec['price'] . ' 円' ?>
                   <?PHP print '</div>' ?>
-
                   <?PHP } ?>
             </div>
           </div>
         </div>
-    </div>
     <button type="button" class="d-flex d-grid btn btn-primary mx-auto mb-5 ">
       <a href="shop/shop_cartlook.php" class="text-white text-decoration-none">カートを見る</a>
     </button>
@@ -98,7 +96,7 @@
       </ul>
       <small>Copyright&copy; Ryuji </small>
     </footer>
-    </div>
+  </div>
 </body>
 
 </html>
