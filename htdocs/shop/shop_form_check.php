@@ -38,58 +38,58 @@
     </ul>
   </nav>
 
-  <div class="container mt-5 pt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h3 class="mb-5 text-center">購入確認画面</h3>
-        <h4 class="mb-5 text-center">お間違いがないか確認してください</h4>
+        <h3 class=" text-pro d-flex justify-content-center mb-4">購入確認画面</h3>
+        <h4 class="mb-4 text-center">お間違いがないかご確認ください</h4>
         <ul class="list-group">
-          <li class="list-group-item">
+          <li class="list-group-item border-2">
 
             <?PHP $okflg = true; ?>
             <?PHP if ($onamae == '') {
               print 'お名前が入力されていません。 <br> <br>';
               $okflg = false;
             } else {
-              print 'お名前 : ';
+              print '<div class="border-bottom">【お名前】</div> ';
               print $onamae;
             } ?>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item border-2">
             <?PHP if (preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9._-]+)+$/', $email) == 0) {
               print 'メールアドレスを正確に入力してください';
               $okflg = false;
             } else {
-              print 'メールアドレス : ';
+              print '<div class="border-bottom">【メールアドレス】</div> ';
               print $email;
             } ?>
-          <li class="list-group-item">
+          <li class="list-group-item border-2">
             <?PHP if (preg_match('/^[0-9]+$/', $postal1) == 0) {
               if (preg_match('/^[0-9]+$/', $postal2) == 0)
                 print '郵便番号は半角数字で入力してください。';
               $okflg = false;
             } else {
-              print '郵便番号 : ';
+              print '<div class="border-bottom">【郵便番号】</div> ';
               print $postal1;
               print '-';
               print $postal2;
             } ?>
           </li>
-          <li class=" list-group-item ">
+          <li class=" list-group-item border-2">
             <?PHP if ($address == '') {
               print '住所が入力されていません。';
               $okflg = false;
             } else {
-              print '住所 : ';
+              print '<div class="border-bottom">【住所】</div> ';
               print $address;
             } ?>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item border-2">
             <?PHP if (preg_match('/^[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}$/', $tel) == 0) {
               print '電話番号を正確に入力してください。';
               $okflg = false;
             } else {
-              print '電話番号 : ';
+              print '<div class="border-bottom">【電話番号】</div> ';
               print $tel;
             } ?>
           </li>
@@ -115,6 +115,7 @@
       </div>
     </div>
   </div>
+  
   <footer class="fixed-bottom">
     <ul class="d-flex justify-content-center list-unstyled">
       <li><a href="index.html">トップページ</a></li>
