@@ -29,7 +29,7 @@
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <h3 class=" text-pro d-flex justify-content-center mb-4">商品追加</h3>
-        <form method="post" action="pro_add_check.php">
+        <form method="post" action="pro_add_check.php" enctype="multipart/form-data">
           <div class="mb-3">
             <input type="text" class="form-control" name="name" placeholder="商品名を入力してください" value="">
           </div>

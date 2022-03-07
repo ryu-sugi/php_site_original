@@ -153,7 +153,7 @@
     </div>
 
     <div class="my-1 d-flex justify-content-center">
-    <a class="d-grid btn btn-primary text-white" href="shop_list.php">商品画面へ</a>
+    <a class="d-grid btn btn-primary text-white" href="../index.php">トップページへ</a>
     </div>
 
 

@@ -47,7 +47,7 @@
   </nav>
 
   <div class="container">
-    <h3 class="text-cart mt-5 d-flex justify-content-center">カートの中身</h3>
+    <h3 class="text-cart mt-5 d-flex justify-content-center">商品管理</h3>
     <div class="d-flex justify-content-center">
       <div class="col-md-6">
           <table class="table table-bordered">

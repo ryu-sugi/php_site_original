@@ -64,25 +64,43 @@
 
   <div class="container">
     <h3 class="text-cart my-5 d-flex justify-content-center">商品修正</h3>
+    <form method="post" action="pro_edit_check.php" enctype="multipart/form-data">
+      <input type="hidden" name="code" value="<?php print $pro_code; ?>">
+      <input type="hidden" name="gazou_name_old" value="<?php print $pro_gazou_name_old; ?>">
     <div class="d-flex align-items-center justify-content-center">
-      <div class=" col-md-6">
-        <form method="post" action="pro_edit_check.php" enctype="multipart/form-data">
-          商品名<input type="hidden" name="code" value="<?php print $pro_code; ?>"> <br>
-          <input type="hidden" name="gazou_name_old" value="<?php print $pro_gazou_name_old; ?>">
-          <input type="text" name="name" style="width:200px" value="<?php print $pro_name; ?>"> <br> <br>
-          <input type="text" name="price" style="width: 50px" value="<?php print $pro_price; ?>">円<br />
-          <?php print $disp_gazou; ?>
-          画像を選んでください。 <br>
-          <input type="file" name="gazou" style="width: 400px"><br>
-          <br>
+      <div class="col-md-6">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>商品コード</th>
+              <th>商品名</th>
+              <th>価格</th>
+              <th>画像</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td> <?php print $pro_code; ?></td>
+                <td> <input type="text" name="name" value="<?php print $pro_name; ?>"> </td>
+                <td> <input type="text" name="price" value="<?php print $pro_price; ?>">円 </td>
+                <td> <?php print $disp_gazou; ?>
+                  <br> 画像を選んでください。
+                  <br> <input type="file" name="gazou">
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <div class="my-5 d-flex justify-content-center ">
-            <input class="m-3 d-grid btn btn-primary text-white" type="button" onclick="history.back()" value="戻る">
-            <input class="m-3 d-grid btn btn-primary text-white" type="submit" value="OK">
+            <input class="ml-3 d-grid btn btn-primary text-white" type="button" onclick="history.back()" value="戻る">
+            <input class="ml-3 d-grid btn btn-primary text-white mx-2" t type="submit" value="OK">
+          </div>
         </form>
       </div>
-
-
     </div>
+
+
+
+  </div>
   </div>
   </div>
 
