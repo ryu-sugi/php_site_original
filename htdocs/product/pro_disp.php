@@ -63,7 +63,7 @@
   </nav>
 
   <div class="container">
-    <h3 class="my-5 d-flex justify-content-center">商品情報参照</h3>
+    <h3 class="text-cart my-5 d-flex justify-content-center">商品情報参照</h3>
     <div class="d-flex align-items-center justify-content-center">
       <div class="col-md-6">
           <table class="table table-bordered">

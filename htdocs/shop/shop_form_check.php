@@ -109,13 +109,13 @@
     print '</form>';
     } else {
     print '<form>';
-    print '<input type="button" onclick="history.back()" value="戻る">';
+    print '<input class="btn btn-primary type="button" type="button" onclick="history.back()" value="戻る">';
     print '</form>';
     } ?>
       </div>
     </div>
   </div>
-  
+
   <footer class="fixed-bottom">
     <ul class="d-flex justify-content-center list-unstyled">
       <li><a href="index.html">トップページ</a></li>
