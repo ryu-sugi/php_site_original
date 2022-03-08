@@ -66,7 +66,7 @@ session_regenerate_id(true);
                 } ?>
                 <?PHP print '<a class="text-decoration-none text-dark" href="shop/shop_product.php?procode=' . $rec['code'] . '">';
                 '</a>' ?>
-                <?PHP print ' <div class="border">' ?>
+                <?PHP print ' <div class="border mt-2">' ?>
                 <?PHP print '商品名 : ' . $rec['name'] . '<br>' ?>
                 <?PHP print '</div>' ?>
                 <?PHP print ' <div class="border">' ?>
