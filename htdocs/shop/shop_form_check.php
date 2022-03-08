@@ -116,7 +116,7 @@
     </div>
   </div>
 
-  <footer class="fixed-bottom">
+  <footer class="">
     <ul class="d-flex justify-content-center list-unstyled">
       <li><a href="index.html">トップページ</a></li>
       <li><a href="product/pro_list.php">商品一覧</a></li>

@@ -58,7 +58,7 @@ session_regenerate_id(true);
         <h2>商品一覧</h2>
         <div class="container mt-5">
           <div class="row">
-            <div class="col-md-3 table d-flex justify-content-around ">
+            <div class="col-md-3 table d-flex flex-wrap justify-content-around ">
               <?PHP while (true) { ?>
                 <?PHP $rec = $stmt->fetch(PDO::FETCH_ASSOC);
                 if ($rec == false) {
